@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff;
+}
+.box{
+    position: relative;
+    width: 300px;
+    height: 600px;
+    background-color: #666;
+    border-radius: 50px;
+}
+.box::before{
+    content: "";
+    position: absolute;
+    inset: 3px;
+    background-color: #000;
+    border-radius: 48px;
+}
+.inner{
+    position: absolute;
+    inset: 3px;
+    background: url(./img/iPhone-14-Blue.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 48px;
+    border: 10px solid #000;
+    opacity: 0;
+    transition: 0.5s;
+}
+.box:hover .inner{
+    opacity: 1;
+}
