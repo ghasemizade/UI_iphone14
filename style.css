@@ -81,6 +81,9 @@ body{
     background: #000;
     border-radius: 20px;
     transition: .5s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .area_popup:hover{
     width: 180px;
@@ -90,4 +93,63 @@ body{
     width: 250px;
     height: 60px;
     border-radius: 50px;
+}
+.content{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    line-height: 25px;
+}
+.content p{
+    color: #fff;
+    font-size: .6em;
+    cursor: default;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+.action{
+    position: relative;
+    top: 5px;
+    color: #fff;
+    display: flex;
+    gap: 12px;
+    transition: .5s;
+    visibility: hidden;
+    opacity: 0;
+}
+ion-icon.red{
+    color: #fd443b;
+    transform: rotate(135deg);
+    cursor: pointer;
+    transition: .5s;
+}
+ion-icon.green{
+    color: #31d059;
+    cursor: pointer;
+    transition: .5s;
+}
+.area_popup:hover p,
+.area_popup.active p,
+.area_popup:hover .action,
+.area_popup.active .action{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.25s;
+}
+.area_popup.active ion-icon.red{
+    background-color: #fd443b;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px #fd443b;
+    margin-right: 12px;
+}
+.area_popup.active ion-icon.green{
+    background-color: #31d059;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px #31d059;
+    margin-right: 8px;
 }
