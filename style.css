@@ -50,7 +50,7 @@ body{
     height: 26px;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-    background: radial-gradient(#ccc, #666, #222);
+    background: radial-gradient(#eee, #666, #222);
     z-index: 10;
 }
 .btn.btn2{
